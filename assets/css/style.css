@@ -15,6 +15,7 @@
 
 html {
     font-family: Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 
 .col {
@@ -28,6 +29,12 @@ html {
     margin-right: -8px;
 }
 
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
 .col-third {
     width: 33.33333%;
 }
@@ -36,8 +43,24 @@ html {
     width: 50%;
 }
 
+.col-full {
+    width: 100%;
+}
+
 .text-center {
     text-align: center;
+}
+
+.mt-8 {
+    margin-top: 8px;
+}
+
+.mt-16 {
+    margin-top: 16px;
+}
+
+.pull-right {
+    float: right;
 }
 
 /* Main */
@@ -170,8 +193,7 @@ html {
     width: 800px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 74px;
-    padding-bottom: 74px;
+    padding: 74px 0 112px;
 }
 
 #content .content-heading {
@@ -245,7 +267,6 @@ html {
 
 .place-list {
     margin-top: 32px;
-    margin-bottom: 32px;
 }
 
 .place-list .place-img {
@@ -275,7 +296,7 @@ html {
     line-height: 1.4;
 }
 
-.place-list .place-btn-buy {
+.btn {
     text-decoration: none;
     color: #fff;
     background-color: #000;
@@ -285,7 +306,7 @@ html {
     border: none;
 }
 
-.place-list .place-btn-buy:hover {
+.btn:hover {
     background-color: #ccc;
     color: #000;
     cursor: pointer;
@@ -383,8 +404,62 @@ html {
     display: flex;
 }
 
-#footer {
+/* CONTACT */
+.contact-section .contact-content {
+    padding-top: 22px;
+}
 
+.contact-section .contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.contact-info i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-section .contact-form {
+    font-size: 15px;
+}
+
+.contact-form .form-control {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.form-submit-btn:hover {
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+
+/* MAP SECTION*/
+.map-section img {
+    width: 100%;
+}
+
+/* FOOTER */
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+}
+
+.social-icon a {
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+    font-size: 22px;
+}
+
+#footer a:hover {
+    opacity: 0.6;
+}
+
+#footer .author,
+#footer .author a{
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 15px;
 }
 
 @keyframes modalFadeIn {
