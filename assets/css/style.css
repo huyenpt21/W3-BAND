@@ -81,6 +81,8 @@ html {
     -> z-index để nó nổi lên trên
     */
     z-index: 1;
+    /* mobile menu */
+    overflow: hidden;
 }
 
 #nav {
@@ -141,12 +143,17 @@ html {
     padding-left: 15px;
     line-height: 38px;
 }
-
+#header .mobile-menu-button,
 #header .search-button {
     color: #fff;
     float: right;
     line-height: 46px;
     padding: 0 21px;
+}
+
+#header .mobile-menu-button:hover {
+    background-color: #ccc;
+    color: #000;
 }
 
 #header .search-button:hover {
